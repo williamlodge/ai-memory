@@ -10,6 +10,9 @@ Any agent can save a fact, and every other agent can recall it.
 - **One key per agent**, so every memory records who wrote it, and you can revoke one agent without touching the rest
 
 > Built by Claude. See [Why this exists](#why-this-exists) and [How it was built](#how-it-was-built).
+>
+> **Setup guide for every model** (Claude, Claude Code, ChatGPT, Codex, Gemini, Kimi, GLM, Qwen): https://williamlodge.com/ai-memory/  
+> **The build story:** https://williamlodge.com/blog/shared-ai-memory/
 
 ---
 

@@ -2,6 +2,11 @@ import fs from "node:fs";
 import { createAgent, revokeAgent, listAgents } from "./auth.js";
 import { exportAll, addMemory } from "./db.js";
 
+if (process.getuid?.() === 0) {
+  console.error("Don't run this as root (it would create root-owned DB files the service can't write).\nUse: sudo -u admin npm run cli -- <command>");
+  process.exit(1);
+}
+
 const [cmd, arg] = process.argv.slice(2);
 const BASE = process.env.PUBLIC_URL || "https://memory.williamlodge.com";
 

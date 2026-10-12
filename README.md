@@ -166,7 +166,15 @@ Always back up the custom config and the generated `openlitespeed.conf` before c
 
 ### 4. Create a key per agent
 
-**Always run the CLI as `admin`, from the project folder:**
+**Easiest:** one script creates every key, tests each against the live server, and saves them to a
+root-only file instead of printing them:
+
+```bash
+sudo bash /home/admin/projects/ai-memory/deploy/make-keys.sh               # claude claude-code chatgpt codex gemini kimi glm qwen
+sudo bash /home/admin/projects/ai-memory/deploy/make-keys.sh claude codex  # just these
+```
+
+**Or one at a time.** Always run the CLI as `admin`, from the project folder:
 
 ```bash
 cd /home/admin/projects/ai-memory
